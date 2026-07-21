@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Ақ Мерейім ❤️</title>
+
+<style>
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+color:white;
+font-family:sans-serif;
+text-align:center;
+}
+
+#text{
+font-size:25px;
+line-height:2;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="text">
+Loading...
+</div>
+
+
+
+<script>
+
+
+let data=[
+
+"Aянның жүрегі ашылып жатыр...",
+
+"15%",
+
+"Аян ұялып тұр...",
+
+"35%",
+
+"Дұрыс сөз іздеп жатыр...",
+
+"65%",
+
+"Ақ Мерейімді қатты жақсы көреді...",
+
+"99%",
+
+"Дайын ❤️"
+
+];
+
+
+let i=0;
+
+
+function load(){
+
+if(i<data.length){
+
+document.getElementById("text").innerHTML=data[i];
+
+i++;
+
+setTimeout(load,1000);
+
+}
+
+else{
+
+setTimeout(()=>{
+
+location.href="question.html";
+
+},1500);
+
+}
+
+}
+
+
+load();
+
+
+</script>
+
+
+</body>
+
+</html>
