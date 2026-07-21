@@ -87,6 +87,39 @@ transform:translateY(0);
 
 }
 
+  .videoBtn{
+
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:20px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+transition:.5s;
+
+}
+
+
+.videoBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+#videoBox{
+
+animation:fade 1.5s ease;
+
+}
+
+
+video{
+
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,77,109,0.3);
+
+}
 
 </style>
 
@@ -294,12 +327,46 @@ transform:translateY(0);
 </small>
 
 
+<br><br>
+
+
+<button onclick="showVideo()" class="videoBtn">
+
+Енді сөз емес... ❤️
+
+</button>
+
+
+<div id="videoBox" style="display:none;">
+
+
+<br><br>
+
+
+<video width="100%" controls>
+
+<source src="video.mp4" type="video/mp4">
+
+</video>
+
+
+</div>
+
 </p>
 
 
 </div>
 
+<script>
 
+function showVideo(){
+
+document.getElementById("videoBox").style.display="block";
+
+}
+
+</script>
+  
 </body>
 
 </html>
