@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ақ Мерейім ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#fff5f7,#ffe6eb);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+padding:30px;
+max-width:700px;
+animation:fade 2s ease;
+}
+
+
+h1{
+font-size:45px;
+margin-bottom:30px;
+color:#ff4d6d;
+}
+
+
+p{
+font-size:22px;
+line-height:1.8;
+color:#444;
+margin-bottom:30px;
+}
+
+
+button{
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:0.5s;
+box-shadow:0 0 20px rgba(0,0,0,.1);
+}
+
+
+button:hover{
+transform:scale(1.05);
+}
+
+.noButton{
+
+padding:12px 28px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff8fa3;
+color:white;
+transition:.5s;
+z-index:1000;
+
+}
+
+
+#message{
+
+margin-top:30px;
+font-size:24px;
+color:#444;
+font-weight:bold;
+
+}
+
+.start{
+background:white;
+color:#ff4d6d;
+}
+
+
+.start:hover{
+background:#ff4d6d;
+color:white;
+}
+
+
+.heart{
+font-size:90px;
+animation:heart 1.5s infinite;
+margin-bottom:30px;
+}
+
+
+@keyframes heart{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.2);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<div class="heart">
+
+❤️
+
+</div>
+
+
+<h1>
+WARNING!
+</h1>
+
+
+<p>
+
+Бұл сайт тек бір адамға арналған.
+
+<br><br>
+
+Егер сенің атың
+<b>Ақ Мерей</b>
+болмаса,
+ары қарай өтуге болмайды.
+
+</p>
+
+
+<button class="start"
+onclick="nextPage()">
+
+Мен Ақ Мерейіммін ❤️
+
+</button>
+
+<br><br>
+
+<button class="noButton"
+id="noButton"
+onclick="changeNoButton()">
+
+ЖОҚ 😤
+
+</button>
+
+
+<p id="message"></p>
+
+
+</div>
+
+
+
+
+<script>
+
+function nextPage(){
+
+alert("Қош келдің, Ақ Мерейім ❤️");
+
+}
+
+
+
+let count = 0;
+
+
+const texts = [
+
+
+"КЕТШІ 😒",
+
+"ФАК Ю 😤",
+
+"МЕН МЕРЕЙМІН 😌",
+
+"АЯН ТУПОЙ 😡"
+
+];
+
+
+function moveButton(button){
+
+let maxX = window.innerWidth - 250;
+let maxY = window.innerHeight - 150;
+
+
+let randomX = Math.random()*maxX;
+let randomY = Math.random()*maxY;
+
+
+button.style.position="absolute";
+button.style.left=randomX+"px";
+button.style.top=randomY+"px";
+
+}
+
+
+
+function changeNoButton(){
+
+const button = document.getElementById("noButton");
+
+const message = document.getElementById("message");
+
+
+if(count < texts.length){
+
+button.innerHTML = texts[count];
+
+moveButton(button);
+
+count++;
+
+}
+
+
+else{
+
+
+button.style.display = "none";
+
+
+message.innerHTML = `
+
+<h2>SYSTEM CHECKING...</h2>
+
+<br>
+
+Ақ Мерейімнің жауабы тексерілуде...
+
+<br><br>
+
+100%
+
+<br><br>
+
+✔ VERIFIED
+
+<br><br>
+
+Иә, Аян кейде тупой болады :)
+
+<br><br>
+
+Бірақ ол сені Алланың разылығы үшін
+қатты жақсы көреді. ❤️
+
+<br><br>
+
+Ол сенсіз тіпті одан да тупой.
+
+`;
+
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
